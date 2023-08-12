@@ -1,7 +1,8 @@
-package com.challenge.reba.service;
+package com.challenge.reba.service.impl;
 
 import com.challenge.reba.model.Person;
 import com.challenge.reba.repository.PersonRepository;
+import com.challenge.reba.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
