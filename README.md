@@ -91,8 +91,8 @@ invocar la API desde Internet.</li>
 <li> Tener corriendo MySql localmente</li>
 <li> Ajustar los datos definidos en el archivo de conexión a la base de datos del proyecto: "resources/hibernate.cfg.xml"</li>
 <li> Ejecutar el script de creación que se encuentra en "resources/scripts.sql"</li>
-<li> Ir al directorio del proyecto clonado $ cd ChallengeReba</li>
-<li> Correr el proyecto: $ mvn spring-boot:run </li>
+<li> Ir al directorio del proyecto clonado ($ cd ChallengeReba)</li>
+<li> Correr el proyecto: $ mvn spring-boot:run o levantar graficamente desde un IDE mediante run sobre la clase: com.challenge.reba.RebaApplication</li>
 </ul>
 
 ### Documentación de API:
@@ -109,4 +109,5 @@ http://localhost:5000/swagger-ui/index.html
 <li> Base de datos MySql</li>
 <li> Lombok</li>
 <li> Log4J</li>
+<li> IDE: IntelliJ IDEA 2023.2 (Community Edition)</li>
 </ul>
