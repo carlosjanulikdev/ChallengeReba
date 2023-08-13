@@ -85,11 +85,14 @@ invocar la API desde Internet.</li>
 
 <hr/>
 
-### Documentación para configurar el entorno local
+### Configuración de entorno local
 <ul>
-<li> $ git clone https://github.com/carlosjanulikdev/ChallengeReba</li>
-<li> $ cd ChallengeReba</li>
-<li> $ mvn spring-boot:run</li>
+<li> Clonar el proyecto: $ git clone https://github.com/carlosjanulikdev/ChallengeReba</li>
+<li> Tener corriendo MySql localmente</li>
+<li> Ajustar los datos definidos en el archivo de conexión a la base de datos del proyecto: "resources/hibernate.cfg.xml"</li>
+<li> Ejecutar el script de creación que se encuentra en "resources/scripts.sql"</li>
+<li> Ir al directorio del proyecto clonado $ cd ChallengeReba</li>
+<li> Correr el proyecto: $ mvn spring-boot:run </li>
 </ul>
 
 ### Documentación de API:
@@ -99,8 +102,9 @@ http://localhost:5000/swagger-ui/index.html
 <ul>
 <li> Java 17</li>
 <li> Maven</li>
-<li> JPA</li>
+<li> Spring</li>
 <li> Spring Boot</li>
+<li> JPA</li>
 <li> Swagger</li>
 <li> Base de datos MySql</li>
 <li> Lombok</li>
