@@ -3,11 +3,6 @@ Desafío técnico enviado por Luis
 
 <hr/>
 
-### Documentación de API:<br>
-http://localhost:5000/swagger-ui/index.html
-
-<hr/>
-
 ### Objetivo:
 El principal objetivo es construir una API REST con las operaciones CRUD
 necesarias para gestionar el recurso Persona.
@@ -87,3 +82,15 @@ invocar la API desde Internet.</li>
 <li> Frameworks: Spring Boot, JPA, etc.</li>
 <li> Base de datos: libre elección.</li>
 </ul>
+
+<hr/>
+
+### Documentación para configurar el entorno local
+<ul>
+<li> $ git clone https://github.com/carlosjanulikdev/ChallengeReba</li>
+<li> $ cd ChallengeReba</li>
+<li> $ mvn spring-boot:run</li>
+</ul>
+
+### Documentación de API:<br>
+http://localhost:5000/swagger-ui/index.html
