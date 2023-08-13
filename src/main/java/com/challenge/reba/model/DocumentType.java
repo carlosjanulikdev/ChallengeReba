@@ -2,6 +2,7 @@ package com.challenge.reba.model;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -16,6 +17,7 @@ public class DocumentType {
     private Long id;
 
     @Column(name="description")
+    @NotNull(message = "La descripcion es obligatoria")
     private String description;
 
     @Override

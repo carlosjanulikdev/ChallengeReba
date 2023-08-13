@@ -1,8 +1,10 @@
 package com.challenge.reba.controller;
 
+import com.challenge.reba.dto.PersonDTO;
 import com.challenge.reba.exception.PersonExistingException;
 import com.challenge.reba.model.Person;
 import com.challenge.reba.service.IPersonService;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,12 +41,12 @@ public class PersonController {
 
 
     @PostMapping(value = "/create")
-    public ResponseEntity<Person> create(@RequestBody Person person) throws PersonExistingException {
-        logger.info("Create person:{}", person);
-        Person newPerson = personService.create(person);
+    public ResponseEntity<Person> create(@RequestBody @Valid PersonDTO personDTO) throws PersonExistingException {
+        logger.info("Create person:{}", personDTO);
+        Person newPerson = personService.create(personDTO);
 
         if(newPerson == null){
-            throw new PersonExistingException("Failed to create newPerson:"+person);
+            throw new PersonExistingException("Failed to create newPerson:"+personDTO);
         } else {
             return new ResponseEntity<>(newPerson, HttpStatus.CREATED);
         }
