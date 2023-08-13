@@ -92,5 +92,17 @@ invocar la API desde Internet.</li>
 <li> $ mvn spring-boot:run</li>
 </ul>
 
-### Documentación de API:<br>
+### Documentación de API:
 http://localhost:5000/swagger-ui/index.html
+
+### Tecnologías empleadas en el proyecto
+<ul>
+<li> Java 17</li>
+<li> Maven</li>
+<li> JPA</li>
+<li> Spring Boot</li>
+<li> Swagger</li>
+<li> Base de datos MySql</li>
+<li> Lombok</li>
+<li> Log4J</li>
+</ul>

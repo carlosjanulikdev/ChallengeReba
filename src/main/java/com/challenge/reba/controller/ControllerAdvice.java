@@ -4,6 +4,7 @@ import com.challenge.reba.dto.ErrorDTO;
 import com.challenge.reba.exception.ContactInformationNotFoundException;
 import com.challenge.reba.exception.CountryNotFoundException;
 import com.challenge.reba.exception.DocumentTypeNotFoundException;
+import com.challenge.reba.exception.PersonExistingException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -46,6 +47,16 @@ public class ControllerAdvice {
                 .build();
 
         return new ResponseEntity<>(errorDTO, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(value = PersonExistingException.class)
+    public ResponseEntity<ErrorDTO> personExistingExceptionHandler(PersonExistingException e){
+        ErrorDTO errorDTO = ErrorDTO.builder()
+                .code("P-004")
+                .message(e.getMessage())
+                .build();
+
+        return new ResponseEntity<>(errorDTO, HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)

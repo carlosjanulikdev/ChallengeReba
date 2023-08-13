@@ -41,7 +41,7 @@ public class PersonController {
 
 
     @PostMapping(value = "/create")
-    public ResponseEntity<Person> create(@RequestBody @Valid PersonDTO personDTO) throws PersonExistingException {
+    public ResponseEntity<Person> create(@Valid @RequestBody PersonDTO personDTO) throws PersonExistingException {
         logger.info("Create person:{}", personDTO);
         Person newPerson = personService.create(personDTO);
 
