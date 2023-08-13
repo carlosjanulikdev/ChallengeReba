@@ -2,6 +2,8 @@ package com.challenge.reba.model;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -29,5 +31,11 @@ public class Person {
     @Column(name="phone")
     private String phone;
 
+    @Column(name="email")
+    private String email;
+
+    @Column(name="age")
+    @Min(value = 18, message = "No pueden crearse personas menores de 18 años")
+    private int age;
 
 }

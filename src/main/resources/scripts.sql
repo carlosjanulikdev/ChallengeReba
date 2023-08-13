@@ -15,6 +15,8 @@ CREATE TABLE `reba`.`country` (
 CREATE TABLE `reba`.`person` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `phone` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(75) NOT NULL,
+  `age` INT NOT NULL,
   `document_type_id` INT NOT NULL,
   `document_number` INT NOT NULL,
   `country_id` INT NOT NULL,
