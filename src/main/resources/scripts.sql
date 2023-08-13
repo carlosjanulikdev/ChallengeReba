@@ -14,6 +14,7 @@ CREATE TABLE `reba`.`country` (
 
 CREATE TABLE `reba`.`person` (
   `id` INT NOT NULL AUTO_INCREMENT,
+  `full_name` VARCHAR(100) NULL,
   `phone` VARCHAR(100) NULL,
   `email` VARCHAR(75) NULL,
   `age` INT NOT NULL,

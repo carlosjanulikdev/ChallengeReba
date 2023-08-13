@@ -31,6 +31,9 @@ public class Person {
     @JoinColumn(name="country_id", nullable=false)
     private Country country;
 
+    @Column(name="full_name")
+    private String fullName;
+
     @Column(name="phone")
     private String phone;
 
@@ -40,15 +43,15 @@ public class Person {
 
     @Column(name="age")
     @Min(value = 18, message = "No pueden crearse personas menores de 18 años")
-    @NotNull(message = "La edad es obligatoria")
-    private Integer age;
+    private int age;
 
     public Person(){
 
     }
 
-    public Person(Long documentNumber, String phone, String email, Integer age) {
+    public Person(Long documentNumber, String fullName, String phone, String email, int age) {
         this.documentNumber = documentNumber;
+        this.fullName = fullName;
         this.phone = phone;
         this.email = email;
         this.age = age;

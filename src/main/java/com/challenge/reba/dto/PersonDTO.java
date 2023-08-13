@@ -21,16 +21,18 @@ public class PersonDTO {
     @NotNull(message = "El id de pais es obligatorio")
     private Long countryId;
 
+    @Column(name="full_name")
+    private String fullName;
+
     @Column(name="phone")
     private String phone;
 
     @Column(name="email")
-    @Email
+    @Email(message = "El email debe ser valido")
     private String email;
 
     @Column(name="age")
     @Min(value = 18, message = "No pueden crearse personas menores de 18 años")
-    @NotNull(message = "La edad es obligatoria")
-    private Integer age;
+    private int age;
 
 }

@@ -39,6 +39,7 @@ public class PersonService implements IPersonService {
         DocumentType documentType = null;
         Country country = null;
         Person person = new Person(personDTO.getDocumentNumber(),
+                                   personDTO.getFullName(),
                                    personDTO.getPhone(),
                                    personDTO.getEmail(),
                                    personDTO.getAge());
