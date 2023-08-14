@@ -92,8 +92,9 @@ invocar la API desde Internet.</li>
 <li> Ajustar los datos de conexión a la base de datos del proyecto, definidos en "resources/application.properties" bajo las keys "spring.datasource..."</li>
 <li> Ejecutar el script de creación (en la base de datos) que se encuentra en "resources/scripts.sql" (en mi caso utilicé MySQL Workbench). Esto creará el schema, la estructura de la base de datos y la carga de entidades que se asume que están cargadas en el enunciado del Challenge.</li>
 <li> Ir al directorio del proyecto clonado ($ cd ChallengeReba)</li>
-<li> Correr el proyecto: $ mvn spring-boot:run o levantar graficamente desde un IDE mediante run sobre la clase: com.challenge.reba.RebaApplication</li>
+<li> Correr el proyecto: $ mvn spring-boot:run o levantar graficamente desde un IDE mediante run sobre la clase: com.challenge.reba.RebaApplication. Está configurado para que levante en el puerto 5000.</li>
 <li> En caso de querer ejecutar pruebas de stress con JMETER, se debe importar en dicha aplicación el plan de pruebas que se encuentra en "resources/JMeter/Plan de pruebas - Relaciones entre personas (500 threads por segundo).jmx" y ejecutar el test.</li>
+<li> La documentación de la API se encuentra en Swagger (se podrá testear desde allí si se desea)</li>
 </ul>
 
 ### Documentación de API:
