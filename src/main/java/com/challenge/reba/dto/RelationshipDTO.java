@@ -17,4 +17,14 @@ public class RelationshipDTO {
 
     @Column(name="type")
     private String type;
+
+    public RelationshipDTO(){
+
+    }
+
+    public RelationshipDTO(Long id1, Long id2, String type) {
+        this.id1 = id1;
+        this.id2 = id2;
+        this.type = type;
+    }
 }

@@ -1,5 +1,9 @@
 package com.challenge.reba.model;
 
+import com.challenge.reba.exception.RelationshipTypeNotFoundException;
+
+import java.util.Arrays;
+
 public enum RelationshipType {
     HERMANO("HERMAN@"),
     PRIMO("PRIM@"),
@@ -9,5 +13,12 @@ public enum RelationshipType {
 
     private RelationshipType(String description){
         this.description = description;
+    }
+
+    public static RelationshipType findByDescription(String description) {
+        return Arrays.stream(RelationshipType.values())
+                .filter(e -> e.name().equals(description))
+                .findFirst()
+                .orElseThrow(() -> new RelationshipTypeNotFoundException(String.format("Tipo de relación '%s' no disponible", description)));
     }
 }

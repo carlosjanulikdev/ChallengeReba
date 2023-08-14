@@ -48,5 +48,5 @@ CREATE TABLE `reba`.`relationship` (
   PRIMARY KEY (`id`),
   FOREIGN KEY (person_id_1) REFERENCES person(id),
   FOREIGN KEY (person_id_2) REFERENCES person(id),
-  UNIQUE KEY `relationship_unique_fields` (`person_id_1`, `person_id_2`, `type` )
+  UNIQUE KEY `relationship_unique_fields` (`person_id_1`, `person_id_2` )
 );

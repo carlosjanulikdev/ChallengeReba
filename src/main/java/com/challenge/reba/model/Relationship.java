@@ -25,9 +25,8 @@ public class Relationship {
     @JoinColumn(name="person_id_2", nullable=false)
     private Person person2;
 
-    //@Enumerated(EnumType.STRING)
     @Column(name = "type")
-    private /*RelationshipType*/String type;
+    private String type;
 
     public Relationship() {
     }

@@ -1,7 +1,6 @@
 package com.challenge.reba.controller;
 
 import com.challenge.reba.dto.PersonDTO;
-import com.challenge.reba.exception.PersonExistingException;
 import com.challenge.reba.model.Person;
 import com.challenge.reba.service.IPersonService;
 import jakarta.validation.Valid;
@@ -41,15 +40,11 @@ public class PersonController {
 
 
     @PostMapping(value = "/create")
-    public ResponseEntity<Person> create(@Valid @RequestBody PersonDTO personDTO) throws PersonExistingException {
+    public ResponseEntity<Person> create(@Valid @RequestBody PersonDTO personDTO) {
         logger.info("Create person:{}", personDTO);
         Person newPerson = personService.create(personDTO);
 
-        if(newPerson == null){
-            throw new PersonExistingException("Failed to create newPerson:"+personDTO);
-        } else {
-            return new ResponseEntity<>(newPerson, HttpStatus.CREATED);
-        }
+        return new ResponseEntity<>(newPerson, HttpStatus.CREATED);
     }
 
     /**

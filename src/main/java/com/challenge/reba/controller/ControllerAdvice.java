@@ -1,10 +1,7 @@
 package com.challenge.reba.controller;
 
 import com.challenge.reba.dto.ErrorDTO;
-import com.challenge.reba.exception.ContactInformationNotFoundException;
-import com.challenge.reba.exception.CountryNotFoundException;
-import com.challenge.reba.exception.DocumentTypeNotFoundException;
-import com.challenge.reba.exception.PersonExistingException;
+import com.challenge.reba.exception.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -53,6 +50,26 @@ public class ControllerAdvice {
     public ResponseEntity<ErrorDTO> personExistingExceptionHandler(PersonExistingException e){
         ErrorDTO errorDTO = ErrorDTO.builder()
                 .code("P-004")
+                .message(e.getMessage())
+                .build();
+
+        return new ResponseEntity<>(errorDTO, HttpStatus.UNPROCESSABLE_ENTITY);
+    }
+
+    @ExceptionHandler(value = RelationshipExistingException.class)
+    public ResponseEntity<ErrorDTO> relationshipExistingExceptionHandler(RelationshipExistingException e){
+        ErrorDTO errorDTO = ErrorDTO.builder()
+                .code("P-005")
+                .message(e.getMessage())
+                .build();
+
+        return new ResponseEntity<>(errorDTO, HttpStatus.UNPROCESSABLE_ENTITY);
+    }
+
+    @ExceptionHandler(value = RelationshipTypeNotFoundException.class)
+    public ResponseEntity<ErrorDTO> relationshipTypeNotFoundExceptionHandler(RelationshipTypeNotFoundException e){
+        ErrorDTO errorDTO = ErrorDTO.builder()
+                .code("P-006")
                 .message(e.getMessage())
                 .build();
 
