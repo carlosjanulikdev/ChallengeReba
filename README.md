@@ -89,8 +89,8 @@ invocar la API desde Internet.</li>
 <ul>
 <li> Clonar el proyecto: $ git clone https://github.com/carlosjanulikdev/ChallengeReba</li>
 <li> Tener corriendo MySql localmente</li>
-<li> Ajustar los datos definidos en el archivo de conexión a la base de datos del proyecto: "resources/hibernate.cfg.xml"</li>
-<li> Ejecutar el script de creación que se encuentra en "resources/scripts.sql"</li>
+<li> Ajustar los datos de conexión a la base de datos del proyecto, definidos en "resources/application.properties" bajo las keys "spring.datasource..."</li>
+<li> Ejecutar el script de creación (en la base de datos) que se encuentra en "resources/scripts.sql" (en mi caso utilicé MySQL Workbench)</li>
 <li> Ir al directorio del proyecto clonado ($ cd ChallengeReba)</li>
 <li> Correr el proyecto: $ mvn spring-boot:run o levantar graficamente desde un IDE mediante run sobre la clase: com.challenge.reba.RebaApplication</li>
 </ul>
