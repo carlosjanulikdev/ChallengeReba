@@ -19,6 +19,7 @@ public class StatService implements IStatService {
         List<StatResultSet> listResultSet = statRepository.findPersonsCountByCountry();
 
         Double personsTotal = listResultSet.stream().mapToDouble( p -> p.getCount()).sum();
+        //Converting from List<StatResultSet> to List<StatDTO>
         List<StatDTO> list = listResultSet.stream()
                                 .map( st -> new StatDTO(
                                         (Double.valueOf(st.getCount()/personsTotal*100)).toString(),
