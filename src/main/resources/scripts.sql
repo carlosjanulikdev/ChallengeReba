@@ -39,4 +39,14 @@ insert into reba.document_type (id, description) values (1, 'DNI');
 insert into reba.document_type (id, description) values (2, 'Pasaporte nacional');
 insert into reba.document_type (id, description) values (3, 'Tarjeta de residencia');
 
-
+--5. Create table level 2
+CREATE TABLE `reba`.`relationship` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `person_id_1` INT NOT NULL,
+  `person_id_2` INT NOT NULL,
+  `type` VARCHAR(100) NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (person_id_1) REFERENCES person(id),
+  FOREIGN KEY (person_id_2) REFERENCES person(id),
+  UNIQUE KEY `relationship_unique_fields` (`person_id_1`, `person_id_2`, `type` )
+);

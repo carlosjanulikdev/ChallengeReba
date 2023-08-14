@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/person")
+@RequestMapping(value = "/personas")
 public class PersonController {
     Logger logger = LoggerFactory.getLogger(PersonController.class);
 
