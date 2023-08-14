@@ -5,6 +5,8 @@ import com.challenge.reba.exception.RelationshipTypeNotFoundException;
 import java.util.Arrays;
 
 public enum RelationshipType {
+
+    PADRE("PADRE"),
     HERMANO("HERMAN@"),
     PRIMO("PRIM@"),
     TIO("TI@");
